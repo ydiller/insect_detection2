@@ -15,3 +15,6 @@ def train_test_split(dir_path):
   
 def main():
   train_test_split("/home/lab/dillery/images/")
+
+if __name__ == '__main__':
+    main()
