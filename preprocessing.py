@@ -14,4 +14,4 @@ def train_test_split(dir_path):
   print(cc_list)
   
 def main():
-  train_test_split("images")
+  train_test_split("/home/lab/dillery/images/")
