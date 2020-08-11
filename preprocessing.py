@@ -6,7 +6,7 @@ def train_test_split(dir_path):
   cc_list=[]
   bz_list=[]
   for dir in os.walk(dir_path):
-    print(dir_path)
+    print(dir)
     if "cc" in dir:
       cc_list.append(dir)
     if "bz" in dir:
