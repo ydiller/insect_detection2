@@ -5,13 +5,13 @@ import numpy as np
 def train_test_split(dir_path):
   cc_list=[]
   bz_list=[]
-  for dir in os.walk(dir_path):
-    print(dir)
-    if "cc" in dir:
-      cc_list.append(dir)
-    if "bz" in dir:
-      bz_list.append(dir)
-  
+  for root,dirs,files in os.walk(dir_path):
+    for dir in dirs:
+      if "cc" in dir:
+        cc_list.append(dir)
+      if "bz" in dir:
+        bz_list.append(dir)
+
   print(cc_list)
   
 def main():
