@@ -48,7 +48,7 @@ def main():
   #train_test_split("/home/lab/dillery/images/")
   cc_train, cc_val , cc_test , bz_train, bz_val, bz_test = train_test_split("/images")
   for file in cc_train:
-      copytree("/images/" + file, "/images/cc/train/" + file)
+      copytree("/home/lab/dillery/images/" + file, "/home/lab/dillery/images/cc/train/" + file)
   for file in cc_val:
       copytree("/images/" + file, "/images/cc/val/" + file)
   for file in cc_test:
