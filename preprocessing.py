@@ -42,25 +42,23 @@ def copytree(src, dst, symlinks=False, ignore=None):
       if os.path.isdir(s):
           shutil.copytree(s, d, symlinks, ignore)
       else:
-          print("source: ",s)
-          print("dest: ",d)
           shutil.copy2(s, d)
           
 def main():
   #train_test_split("/home/lab/dillery/images/")
   cc_train, cc_val , cc_test , bz_train, bz_val, bz_test = train_test_split("/images")
   for file in cc_train:
-      copytree("/images/" + file + "/", "/images/cc/train/")
+      copytree("/images/" + file, "/images/cc/train/")
   for file in cc_val:
-      copytree("/images/" + file, "/images/cc/val/" + file)
+      copytree("/images/" + file, "/images/cc/val/")
   for file in cc_test:
-      copytree("/images/" + file, "/images/cc/test/" + file)
+      copytree("/images/" + file, "/images/cc/test/")
   for file in bz_train:
-      copytree("/images/" + file, "/images/bz/train/" + file)
+      copytree("/images/" + file, "/images/bz/train/")
   for file in bz_val:
-      copytree("/images/" + file, "/images/bz/val/" + file)
+      copytree("/images/" + file, "/images/bz/val/")
   for file in bz_test:
-      copytree("/images/" + file, "/images/bz/test/" + file)
+      copytree("/images/" + file, "/images/bz/test/")
 
 if __name__ == '__main__':
     main()
