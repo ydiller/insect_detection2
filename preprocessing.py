@@ -58,7 +58,7 @@ def main():
   for file in bz_val:
       copytree("/images/" + file, "images/val/" + file)
   for file in bz_test:
-      copytreee("/images/" + file, "images/test/" + file)
+      copytree("/images/" + file, "images/test/" + file)
 
 if __name__ == '__main__':
     main()
