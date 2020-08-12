@@ -38,7 +38,7 @@ def train_test_split(dir_path):
 def copytree(src, dst, symlinks=False, ignore=None):
   for item in os.listdir(src):
       s = os.path.join(src, item)
-      d = dst
+      d = os.path.join(dst, item)
       if os.path.isdir(s):
           shutil.copytree(s, d, symlinks, ignore)
       else:
@@ -50,7 +50,7 @@ def main():
   #train_test_split("/home/lab/dillery/images/")
   cc_train, cc_val , cc_test , bz_train, bz_val, bz_test = train_test_split("/images")
   for file in cc_train:
-      copytree("/images/" + file + "/", "/images/cc/train/" + file + "/")
+      copytree("/images/" + file + "/", "/images/cc/train/")
   for file in cc_val:
       copytree("/images/" + file, "/images/cc/val/" + file)
   for file in cc_test:
