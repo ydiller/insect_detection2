@@ -17,8 +17,8 @@ def train_test_split(dir_path):
   
         
   # create temporary fake labels     
-  #cc_labels = np.ones(len(cc_list))
-  #bz_labels = np.ones(len(bz_list))
+  cc_labels = np.ones(len(cc_list))
+  bz_labels = np.ones(len(bz_list))
   
   # create train/val/test subsets in [0.6:0.2:0.2] ratio using scikit
   #cc_train, cc_test, cc_train_labels, cc_test_labels = model_selection.train_test_split(cc_list, cc_labels, train_size=0.8,test_size=0.2, random_state=10)
