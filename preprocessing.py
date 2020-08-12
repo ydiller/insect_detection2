@@ -13,6 +13,8 @@ def train_test_split(dir_path):
         cc_list.append(dir)
       if "bz" in dir:
         bz_list.append(dir)
+   
+  
         
   # create temporary fake labels     
   cc_labels = np.ones(len(cc_list))
@@ -34,7 +36,7 @@ def train_test_split(dir_path):
   print("bz test: ", bz_test)
   
 def main():
-  train_test_split("/home/lab/dillery/images/")
+  train_test_split("images/")
 
 if __name__ == '__main__':
     main()
