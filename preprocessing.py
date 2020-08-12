@@ -35,21 +35,30 @@ def train_test_split(dir_path):
   
   return cc_train, cc_val , cc_test , bz_train, bz_val, bz_test
   
+def copytree(src, dst, symlinks=False, ignore=None):
+  for item in os.listdir(src):
+      s = os.path.join(src, item)
+      d = os.path.join(dst, item)
+      if os.path.isdir(s):
+          shutil.copytree(s, d, symlinks, ignore)
+      else:
+          shutil.copy2(s, d)
+          
 def main():
   #train_test_split("/home/lab/dillery/images/")
   cc_train, cc_val , cc_test , bz_train, bz_val, bz_test = train_test_split("/images")
   for file in cc_train:
-      shutil.copyfile("/images/" + file, "images/train/" + file)
+      copytree("/images/" + file, "images/train/" + file)
   for file in cc_val:
-      shutil.copyfile("/images/" + file, "images/val/" + file)
+      copytree("/images/" + file, "images/val/" + file)
   for file in cc_test:
-      shutil.copyfile("/images/" + file, "images/test/" + file)
+      copytree("/images/" + file, "images/test/" + file)
   for file in bz_train:
-      shutil.copyfile("/images/" + file, "images/train/" + file)
+      copytree("/images/" + file, "images/train/" + file)
   for file in bz_val:
-      shutil.copyfile("/images/" + file, "images/val/" + file)
+      copytree("/images/" + file, "images/val/" + file)
   for file in bz_test:
-      shutil.copyfile("/images/" + file, "images/test/" + file)
+      copytreee("/images/" + file, "images/test/" + file)
 
 if __name__ == '__main__':
     main()
