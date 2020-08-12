@@ -47,9 +47,9 @@ def copytree(src, dst, symlinks=False, ignore=None):
 def main():
   #train_test_split("/home/lab/dillery/images/")
   cc_train, cc_val , cc_test , bz_train, bz_val, bz_test = train_test_split("/images")
-  os.makedirs("/images/cc/train")
-  os.mkdir("/images/cc/test")
-  os.mkdir("/images/cc/val")
+  #os.makedirs("/images/cc/train")
+  #os.mkdir("/images/cc/test")
+  #os.mkdir("/images/cc/val")
   os.makedirs("/images/bz/train")
   os.mkdir("/images/bz/test")
   os.mkdir("/images/bz/val")
