@@ -47,18 +47,21 @@ def copytree(src, dst, symlinks=False, ignore=None):
 def main():
   #train_test_split("/home/lab/dillery/images/")
   cc_train, cc_val , cc_test , bz_train, bz_val, bz_test = train_test_split("/images")
+  os.mkdirs(/images/cc/train")
+  os.mkdir(/images/cc/test")
+  os.mkdir(/images/cc/val")
   for file in cc_train:
-      copytree("/images/" + file, "/cc/train/")
+      copytree("/images/" + file, "/images/cc/train/")
   for file in cc_val:
-      copytree("/images/" + file, "/cc/val/")
+      copytree("/images/" + file, "/images/cc/val/")
   for file in cc_test:
-      copytree("/images/" + file, "/cc/test/")
+      copytree("/images/" + file, "/images/cc/test/")
   for file in bz_train:
-      copytree("/images/" + file, "/bz/train/")
+      copytree("/images/" + file, "/images/bz/train/")
   for file in bz_val:
-      copytree("/images/" + file, "/bz/val/")
+      copytree("/images/" + file, "/images/bz/val/")
   for file in bz_test:
-      copytree("/images/" + file, "/bz/test/")
+      copytree("/images/" + file, "/images/bz/test/")
 
 if __name__ == '__main__':
     main()
