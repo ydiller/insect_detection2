@@ -42,6 +42,8 @@ def copytree(src, dst, symlinks=False, ignore=None):
       if os.path.isdir(s):
           shutil.copytree(s, d, symlinks, ignore)
       else:
+          print("source: ",s)
+          print("dest: ",d)
           shutil.copy2(s, d)
           
 def main():
