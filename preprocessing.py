@@ -36,7 +36,8 @@ def train_test_split(dir_path):
   print("bz test: ", bz_test)
   
 def main():
-  train_test_split("/home/lab/dillery/images/")
+  #train_test_split("/home/lab/dillery/images/")
+  train_test_split("/images")
 
 if __name__ == '__main__':
     main()
