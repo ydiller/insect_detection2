@@ -50,6 +50,9 @@ def main():
   os.makedirs("/images/cc/train")
   os.mkdir("/images/cc/test")
   os.mkdir("/images/cc/val")
+  os.makedirs("/images/bz/train")
+  os.mkdir("/images/bz/test")
+  os.mkdir("/images/bz/val")
   for file in cc_train:
       copytree("/images/" + file, "/images/cc/train/")
   for file in cc_val:
