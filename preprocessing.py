@@ -28,14 +28,28 @@ def train_test_split(dir_path):
   
   bz_train, bz_test = model_selection.train_test_split(bz_list, train_size=0.8,test_size=0.2, random_state=10)
   bz_train, bz_val = model_selection.train_test_split(bz_train, train_size=0.75,test_size=0.25, random_state=10)
-
-  print("bz train: ", bz_train)
-  print("bz val: ", bz_val)
-  print("bz test: ", bz_test)
+  
+  #print("bz train: ", bz_train)
+  #print("bz val: ", bz_val)
+  #print("bz test: ", bz_test)
+  
+  return cc_train, cc_val , cc_test , bz_train, bz_val, bz_test
   
 def main():
   #train_test_split("/home/lab/dillery/images/")
-  train_test_split("/images")
+  cc_train, cc_val , cc_test , bz_train, bz_val, bz_test = train_test_split("/images")
+  for file in cc_train:
+      shutil.copyfile("images/" + file, "images/train/" + file)
+  for file in cc_val:
+      shutil.copyfile("images/" + file, "images/val/" + file)
+  for file in cc_test:
+      shutil.copyfile("images/" + file, "images/test/" + file)
+  for file in bz_train:
+      shutil.copyfile("images/" + file, "images/train/" + file)
+  for file in bz_val:
+      shutil.copyfile("images/" + file, "images/val/" + file)
+  for file in bz_test:
+      shutil.copyfile("images/" + file, "images/test/" + file)
 
 if __name__ == '__main__':
     main()
