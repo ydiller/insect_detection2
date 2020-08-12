@@ -48,17 +48,17 @@ def main():
   #train_test_split("/home/lab/dillery/images/")
   cc_train, cc_val , cc_test , bz_train, bz_val, bz_test = train_test_split("/images")
   for file in cc_train:
-      copytree("/images/" + file, "/images/cc/train/")
+      copytree("/images/" + file, "/cc/train/")
   for file in cc_val:
-      copytree("/images/" + file, "/images/cc/val/")
+      copytree("/images/" + file, "/cc/val/")
   for file in cc_test:
-      copytree("/images/" + file, "/images/cc/test/")
+      copytree("/images/" + file, "/cc/test/")
   for file in bz_train:
-      copytree("/images/" + file, "/images/bz/train/")
+      copytree("/images/" + file, "/bz/train/")
   for file in bz_val:
-      copytree("/images/" + file, "/images/bz/val/")
+      copytree("/images/" + file, "/bz/val/")
   for file in bz_test:
-      copytree("/images/" + file, "/images/bz/test/")
+      copytree("/images/" + file, "/bz/test/")
 
 if __name__ == '__main__':
     main()
